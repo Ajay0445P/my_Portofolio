@@ -22,6 +22,7 @@ header {
   padding: 60px 20px;
   border-radius: 15px;
   margin-bottom: 40px;
+  animation: fadeInSlide 1s ease-out;
 }
 
 header h1 {
@@ -57,6 +58,7 @@ section {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  animation: fadeIn 1.2s ease-in;
 }
 
 section h2 {
@@ -76,6 +78,9 @@ ul li {
   padding: 8px 12px;
   border-radius: 8px;
   display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 /* Project cards */
@@ -105,3 +110,24 @@ ul li {
 #contact a:hover {
   color: #6c63ff;
 }
+/* Fade-in and Slide Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
